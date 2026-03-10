@@ -57,9 +57,8 @@ ghostcam --input "video=Integrated Camera" --width 1280 --height 720 --fps 30 --
 
 The default PM2 config is in [ecosystem.config.js](/D:/Documents/GitHub/GhostCam/ecosystem.config.js). It currently starts GhostCam with:
 
-- `--background-mode image`
-- `--background-image tests\test_background.webp`
-- `--background-color #222222`
+- `--background-mode color`
+- `--background-color #ECE8E0`
 - `--blur-strength 21`
 
 Start:
@@ -148,8 +147,8 @@ That stop flow will:
 
 ## Default Assets
 
-- Default PM2 background image: [test_background.webp](/D:/Documents/GitHub/GhostCam/tests/test_background.webp)
-- Default solid background color: `#222222`
+- Optional background image asset: [test_background.webp](/D:/Documents/GitHub/GhostCam/tests/test_background.webp)
+- Default PM2 solid background color: `#ECE8E0`
 
 ## License
 
