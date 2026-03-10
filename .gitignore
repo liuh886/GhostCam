@@ -38,6 +38,12 @@ venv.bak/
 # Project-specific
 ghostcam_verify.jpg
 *.log
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+*.orig
 
 # OS generated files
 .DS_Store
@@ -49,4 +55,8 @@ ehthumbs.db
 Thumbs.db
 
 # PM2
-ecosystem.config.js*
+.pm2/
+
+# Editors
+.vscode/
+.idea/
