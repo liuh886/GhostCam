@@ -2,6 +2,25 @@
 
 GhostCam is a headless virtual camera service that reads a physical camera, applies AI segmentation, composites a new background, and publishes the result to a virtual camera such as UnityCapture.
 
+## Why This Architecture
+
+GhostCam is intentionally built as a very lightweight virtual-camera pipeline. The goal is to avoid the usual heavy desktop stack and keep the runtime as small and direct as possible.
+
+- No OBS dependency
+- No GUI application shell
+- No browser/Electron runtime
+- No scene graph, source graph, or streaming studio layer
+- Just camera input, segmentation, compositing, and virtual camera output
+
+In practice, the current runtime is:
+
+- `PyAV` for camera input
+- `MediaPipe` for person segmentation
+- `OpenCV-headless` + `NumPy` for compositing
+- `pyvirtualcam` for virtual camera output
+
+So the accurate claim is: this is a very lightweight, no-OBS, headless architecture, not a zero-OpenCV architecture.
+
 ## Features
 
 - Headless pipeline with no GUI requirement
