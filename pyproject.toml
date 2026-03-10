@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghostcam"
+version = "0.1.0"
+description = "A minimalist, headless background-removal virtual camera service."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "av",
+    "mediapipe",
+    "numpy",
+    "pyvirtualcam",
+    "opencv-python-headless",
+]
+
+[project.scripts]
+ghostcam = "ghostcam.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

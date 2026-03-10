@@ -1,0 +1,5 @@
+av
+mediapipe
+numpy
+pyvirtualcam
+opencv-python-headless
